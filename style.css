@@ -14,10 +14,17 @@ body {
     background-color: rgb(49, 44, 44);
 }
 
-h1{
+h1 {
     text-align: center;
     color: aliceblue;
     margin-top: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: aliceblue;
+    margin-top: 20px;
+
 }
 
 .contenedor {
@@ -31,28 +38,42 @@ h1{
     padding: 20px
 }
 
-.experiencia{
+.experiencia {
     display: flex;
     align-items: flex-start;
     text-align: center;
     color: aliceblue;
 }
 
-.tecnologias{
+.tecnologias {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: center;
+    color: aliceblue;
+}
+
+.mostrar-tecnologias {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.proyectos {
     display: flex;
     align-items: flex-start;
     text-align: center;
     color: aliceblue;
 }
 
-.proyectos{
-    display: flex;
-    align-items: flex-start;
-    text-align: center;
-    color: aliceblue;
-}
-
-.enlaces{
+.enlaces {
     display: flex;
     align-items: flex-start;
     text-align: center;
