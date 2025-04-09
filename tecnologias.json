@@ -1,0 +1,18 @@
+[
+    {
+        "Frontend": [
+            "Html",
+            "Css"
+        ]
+    },
+    {
+        "Backend":[
+            "Php"
+        ]
+    },
+    {
+        "Bbdd":[
+            "My sql"
+        ]
+    }
+]
