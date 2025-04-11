@@ -8,10 +8,10 @@ function mostrar_tecnologias()
 
     foreach ($tecnologias_array as $tecnologia) {
         foreach ($tecnologia as $parte => $lenguajes) {
-            echo "<div class='mostrar-tecnologias'>$parte :";
+            echo "<div class='mostrar-tecnologias'>$parte:";
             echo "<ul>";
             foreach ($lenguajes as $lenguaje) {
-                echo "<li>$lenguaje</li>";
+                echo "<li class='li-lenguaje'>$lenguaje</li>";
             }
             echo "</ul>";
             echo "</div>";

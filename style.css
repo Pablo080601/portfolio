@@ -14,8 +14,18 @@ body {
     background-color: rgb(49, 44, 44);
 }
 
+.bienbenida{
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    width: 100%;
+    background-color: rgb(49, 44, 44);
+}
+
 h1 {
-    text-align: center;
     color: aliceblue;
     margin-top: 20px;
 }
@@ -35,7 +45,9 @@ h2 {
     flex-wrap: nowrap;
     overflow-x: auto;
     gap: 16px;
-    padding: 20px
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
 }
 
 .experiencia {
@@ -51,6 +63,9 @@ h2 {
     align-items: flex-start;
     text-align: center;
     color: aliceblue;
+    gap: 24px;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .mostrar-tecnologias {
@@ -59,11 +74,21 @@ h2 {
     justify-content: flex-start;
 }
 
+li.li-lenguaje{
+    padding: 8px;
+    background-color: aliceblue;
+    border-radius: 24px;
+    color: black;
+}
+
 ul {
     list-style: none;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 0;
 }
 
 .proyectos {
@@ -75,7 +100,30 @@ ul {
 
 .enlaces {
     display: flex;
-    align-items: flex-start;
     text-align: center;
     color: aliceblue;
+    gap: 8px;
+}
+
+.img-pokecartas{
+    border-radius: 24px;
+    width: 200px;
+}
+
+a{
+    display: flex;
+    padding: 6px;
+    background-color: aliceblue;
+    color: black;
+    border-radius: 24px;
+    align-items: center;
+}
+.logo-linkedin{
+    width: 30px;
+    padding:6px;
+}
+
+.logo-github{
+    width: 30px;
+    padding: 6px;
 }
