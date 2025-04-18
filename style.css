@@ -14,117 +14,357 @@ body {
     background-color: rgb(49, 44, 44);
 }
 
-.bienbenida{
+.bienbenida {
     position: sticky;
     top: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 24px;
+    padding: 16px;
     width: 100%;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(3px);
+    flex-direction: space-between;
+    align-items: flex-start;
+    gap: 8px;
+    display: flex;
 }
 
-h1 {
-    color: aliceblue;
-    margin-top: 20px;
-}
-
+h1,
 h2 {
-    text-align: center;
     color: aliceblue;
-    margin-top: 20px;
-
+    margin-top: 16px;
+    text-align: center;
 }
 
 .contenedor {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     width: 100%;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    gap: 16px;
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
+    padding: 16px;
+    gap: 12px;
 }
 
-.experiencia {
-    display: flex;
-    align-items: flex-start;
-    text-align: center;
+.experiencia,
+.proyectos {
     color: aliceblue;
+    text-align: left;
 }
 
 .tecnologias {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    text-align: center;
+    flex-direction: column;
+    gap: 12px;
     color: aliceblue;
-    gap: 24px;
-    width: 100%;
-    justify-content: space-between;
 }
 
 .mostrar-tecnologias {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-}
-
-li.li-lenguaje{
-    padding: 8px;
-    background-color: aliceblue;
-    border-radius: 24px;
-    color: black;
 }
 
 ul {
     list-style: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 12px;
-    align-items: flex-start;
     padding: 0;
+    gap: 8px;
 }
 
-.proyectos {
-    display: flex;
-    align-items: flex-start;
-    text-align: center;
-    color: aliceblue;
+li.li-lenguaje {
+    padding: 6px 12px;
+    background-color: aliceblue;
+    border-radius: 16px;
+    color: black;
+    font-size: 14px;
+    display: inline-flex;
+
 }
 
 .enlaces {
     display: flex;
-    text-align: center;
-    color: aliceblue;
+    flex-direction: flex-end;
     gap: 8px;
+    align-items: center;
 }
 
-.img-pokecartas{
-    border-radius: 24px;
-    width: 200px;
-}
-
-a{
-    display: flex;
+a {
     padding: 6px;
     background-color: aliceblue;
     color: black;
     border-radius: 24px;
+    display: flex;
     align-items: center;
-}
-.logo-linkedin{
-    width: 30px;
-    padding:6px;
+    justify-content: center;
 }
 
-.logo-github{
-    width: 30px;
-    padding: 6px;
+.img-pokecartas {
+    border-radius: 24px;
+    width: 100%;
+    max-width: 280px;
+}
+
+.logo-linkedin,
+.logo-github {
+    width: 24px;
+    padding: 4px;
+}
+
+@media screen and (min-width: 768px) {
+    .bienbenida {
+        display: flex;
+        justify-content: space-between;
+        padding: 24px;
+        flex-direction: row;
+    }
+
+    h1 {
+        color: aliceblue;
+        margin-top: 20px;
+    }
+
+    h2 {
+        text-align: center;
+        color: aliceblue;
+        margin-top: 20px;
+    }
+
+    .contenedor {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 16px;
+        padding: 20px;
+        max-width: 800px;
+        margin: auto;
+    }
+
+    .experiencia {
+        display: flex;
+        align-items: flex-start;
+        text-align: center;
+        color: aliceblue;
+    }
+
+    .tecnologias {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: center;
+        color: aliceblue;
+        gap: 24px;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .mostrar-tecnologias {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    li.li-lenguaje {
+        padding: 8px;
+        background-color: aliceblue;
+        border-radius: 24px;
+        color: black;
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 12px;
+        align-items: flex-start;
+        padding: 0;
+    }
+
+    .proyectos {
+        display: flex;
+        align-items: flex-start;
+        text-align: center;
+        color: aliceblue;
+    }
+
+    .enlaces {
+        display: flex;
+        text-align: center;
+        color: aliceblue;
+        gap: 8px;
+    }
+
+    .img-pokecartas {
+        border-radius: 24px;
+        width: 200px;
+    }
+
+    a {
+        display: flex;
+        padding: 6px;
+        background-color: aliceblue;
+        color: black;
+        border-radius: 24px;
+        align-items: center;
+    }
+
+    .logo-linkedin {
+        width: 30px;
+        padding: 6px;
+    }
+
+    .logo-github {
+        width: 30px;
+        padding: 6px;
+    }
+/* ========== ESTILOS DE LA LÍNEA DE TIEMPO EN MODO ORDENADOR ========== */
+
+/* Contenedor principal de la línea de tiempo */
+.timeline {
+    position: relative;
+    width: 100%;
+    max-width: 1200px; /* Aumentar el ancho máximo para pantallas grandes */
+    margin: 50px auto;
+    padding: 20px 0; /* Espaciado superior e inferior */
+    display: flex; /* Usar flexbox para disposición horizontal */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: flex-start; /* Alinear los elementos en la parte superior */
+}
+
+/* Cada item de la línea de tiempo */
+.timeline-item {
+    display: flex;
+    flex-direction: column; /* Mantener el contenido en columna */
+    align-items: center; /* Centrar los elementos */
+    position: relative;
+}
+
+/* Checkbox oculto */
+.timeline-checkbox {
+    display: none; /* Ocultar el checkbox */
+}
+
+/* El punto de la línea de tiempo */
+.timeline-point {
+    width: 20px;
+    height: 20px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    position: relative; /* Cambiar a relativo para alineación */
+    z-index: 1; /* Asegurarse de que el punto esté encima */
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto de hover en los puntos */
+.timeline-point:hover {
+    background-color: #3e8e41;
+}
+
+/* Línea entre los puntos */
+.timeline-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 50%; /* Centrar la línea */
+    top: 10px; /* Ajustar la posición de la línea */
+    width: calc(100% - 40px); /* Ancho de la línea, ajustado para que no sobresalga */
+    height: 2px; /* Altura de la línea */
+    background-color: #3e8e41; /* Color de la línea */
+    transform: translateX(-50%); /* Centrar la línea */
+}
+
+/* Contenedor de la información de la experiencia */
+.timeline-content {
+    margin-top: 10px; /* Espacio superior para el contenido*/
+}
+}
+
+/* ========== ESTILOS DE LA LÍNEA DE TIEMPO ========== */
+
+/* Contenedor principal de la línea de tiempo */
+.timeline {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column; /* Vertical por defecto */
+    align-items: flex-start; /* Alineación en la parte superior */
+}
+
+/* Cada item de la línea de tiempo */
+.timeline-item {
+    display: flex;
+    flex-direction: column; /* Cambiar a columna para que el contenido esté debajo del punto */
+    align-items: flex-start;
+    margin: 20px 0;
+    position: relative;
+}
+
+/* Checkbox oculto */
+.timeline-checkbox {
+    display: none; /* Ocultar el checkbox */
+}
+
+/* El punto de la línea de tiempo */
+.timeline-point {
+    width: 20px;
+    height: 20px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    position: absolute;
+    left: -11px; /* Ajustar la posición del punto */
+    top: 0; /* Alinear el punto en la parte superior */
+    z-index: 1; /* Asegurarse de que el punto esté encima del checkbox */
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto de hover en los puntos */
+.timeline-point:hover {
+    background-color: #3e8e41;
+}
+
+/* Línea entre los puntos */
+.timeline-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: -7px; /* Ajustar la posición de la línea */
+    top: 20px; /* Ajustar la posición de la línea para que esté debajo del punto */
+    width: 2px; /* Ancho de la línea */
+    height: calc(100% - 20px); /* Altura de la línea, ajustada para que no sobresalga */
+    background-color: #ccc; /* Color de la línea */
+}
+
+/* Contenedor de la información de la experiencia */
+.timeline-content {
+    margin-left: 40px; /* Espacio a la izquierda del contenido */
+    padding: 10px;
+    background-color: aliceblue;
+    border-radius: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+/* Mostrar la información al hacer clic */
+.timeline-checkbox:checked + .timeline-point + .timeline-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Estilos para la fecha, título y descripción */
+.timeline-fecha {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.timeline-titulo {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.timeline-descripcion {
+    font-size: 14px;
+    color: #555;
 }

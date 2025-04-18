@@ -19,13 +19,11 @@
             <a target="_blank" href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-signin"><img class="logo-linkedin" src="logo-linkedin.webp" alt="Linkedin"><span>Linkedin</span></a>
             <a target="_blank" href="https://github.com/Pablo080601"><img class="logo-github" src="logo-github.svg" alt="Github"><span>Github</span></a>
         </div>
-        <nav>
-
-        </nav>
-</header>
+    </header>
     <section class="contenedor">
         <h2>Experiencia</h2>
         <div class="experiencia">
+            <?php mostrar_experiencia() ?>
         </div>
         <h2>Tecnologias que manejo</h2>
         <div class="tecnologias">
