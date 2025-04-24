@@ -8,11 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="timeline.css">
 </head>
 
 <body>
 
-    <header class="bienbenida">
+    <header class="bienvenida">
         <h1>Pablo Ruiz</h1>
         <!-- <h2>Contacto</h2> -->
         <div class="enlaces">
@@ -23,7 +24,7 @@
     <section class="contenedor">
         <h2>Experiencia</h2>
         <div class="experiencia">
-            <?php mostrar_experiencia() ?>
+            <?php mostrar_experiencia_timeline() ?>
         </div>
         <h2>Tecnologias que manejo</h2>
         <div class="tecnologias">

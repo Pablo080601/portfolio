@@ -48,3 +48,39 @@ function mostrar_experiencia()
         echo "</div>";  // Cierre de la línea de tiempo de cada item
     }
 }
+
+function mostrar_experiencia_timeline()
+{
+
+    // Obtener los datos desde el archivo JSON
+    $experiencia = file_get_contents("experiencia.json");
+    $experiencia_array = json_decode($experiencia, true);
+
+    echo "<ul class='timeline'>";
+    // Iterar a través de los elementos de experiencia
+    foreach ($experiencia_array as $index => $tipo) {
+
+        echo "
+        <li class='unchecked' >
+            <div class='checkmark'>
+                <span></span>
+            </div>
+            <div class='line-container'>
+                <div class='line'></div>
+            </div>
+            <div class='text-container'>
+                <div class='date'>$tipo[fecha]</div>
+                <div class='text'>
+                    <div class='timeline-titulo'>
+                        $tipo[titulo]
+                     </div>
+                    <div class='timeline-descripcion'>
+                        $tipo[descripcion]
+                     </div>
+                </div>
+            </div>
+        </li>
+        ";
+    }
+    echo "</ul>";
+}
