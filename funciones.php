@@ -18,46 +18,14 @@ function mostrar_tecnologias()
     }
 }
 
-function mostrar_experiencia()
-{
-    // Obtener los datos desde el archivo JSON
-    $experiencia = file_get_contents("experiencia.json");
-    $experiencia_array = json_decode($experiencia, true);
-
-    // Iterar a través de los elementos de experiencia
-    foreach ($experiencia_array as $index => $tipo) {
-        // Generamos un ID único para cada checkbox
-        $id = "timeline-item-$index";
-
-        // Cada item de la línea de tiempo
-        echo "<div class='timeline-item'>";
-
-        // Checkbox oculto que se usará para activar/desactivar la visibilidad del contenido
-        echo "<input type='checkbox' id='$id' class='timeline-checkbox'>";
-
-        // Etiqueta para el punto de la línea de tiempo (es el que hace click el usuario)
-        echo "<label for='$id' class='timeline-point'></label>";
-
-        // Contenido que se muestra al hacer click (cuando el checkbox está marcado)
-        echo "<div class='timeline-content'>";
-        echo "<div class='timeline-fecha'>{$tipo['fecha']}</div>";
-        echo "<div class='timeline-titulo'>{$tipo['titulo']}</div>";
-        echo "<div class='timeline-descripcion'>{$tipo['descripcion']}</div>";
-        echo "</div>";  // Cierre del contenido de cada item
-
-        echo "</div>";  // Cierre de la línea de tiempo de cada item
-    }
-}
-
 function mostrar_experiencia_timeline()
 {
 
-    // Obtener los datos desde el archivo JSON
     $experiencia = file_get_contents("experiencia.json");
     $experiencia_array = json_decode($experiencia, true);
 
     echo "<ul class='timeline'>";
-    // Iterar a través de los elementos de experiencia
+    
     foreach ($experiencia_array as $index => $tipo) {
 
         echo "
@@ -73,10 +41,10 @@ function mostrar_experiencia_timeline()
                 <div class='text'>
                     <div class='timeline-titulo'>
                         $tipo[titulo]
-                     </div>
+                    </div>
                     <div class='timeline-descripcion'>
                         $tipo[descripcion]
-                     </div>
+                    </div>
                 </div>
             </div>
         </li>

@@ -24,7 +24,6 @@
             border-radius: 50%;
             width: 24px;
             height: 24px;
-
             display: flex;
             justify-content: center;
             align-items: center;
@@ -36,7 +35,6 @@
                 align-items: center;
                 padding: 4px;
                 border-radius: 50%;
-
             }
         }
 
@@ -70,14 +68,18 @@
                 font-size: 13px;
                 color: rgba(0, 0, 0, 0.6);
                 line-height: 1.4;
-
             }
 
             .text {
-
                 font-weight: 500;
-            }
 
+                .timeline-titulo{
+                    color: rgba(0, 0, 0, 0.8);
+                }
+                .timeline-descripcion{
+                    color: black
+                }
+            }
         }
 
 
@@ -92,11 +94,6 @@
                     }
                 }
             }
-
-
-
         }
-
     }
-
 }
