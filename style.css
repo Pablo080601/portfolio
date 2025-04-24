@@ -14,7 +14,7 @@ body {
     background-color: rgb(49, 44, 44);
 }
 
-.bienbenida {
+.bienvenida {
     position: sticky;
     top: 0;
     padding: 16px;
@@ -24,6 +24,7 @@ body {
     flex-direction: space-between;
     align-items: flex-start;
     gap: 8px;
+    z-index: 10;
     display: flex;
 }
 
@@ -105,7 +106,7 @@ a {
 }
 
 @media screen and (min-width: 768px) {
-    .bienbenida {
+    .bienvenida {
         display: flex;
         justify-content: space-between;
         padding: 24px;
@@ -214,65 +215,83 @@ a {
         width: 30px;
         padding: 6px;
     }
-/* ========== ESTILOS DE LA LÍNEA DE TIEMPO EN MODO ORDENADOR ========== */
 
-/* Contenedor principal de la línea de tiempo */
-.timeline {
-    position: relative;
-    width: 100%;
-    max-width: 1200px; /* Aumentar el ancho máximo para pantallas grandes */
-    margin: 50px auto;
-    padding: 20px 0; /* Espaciado superior e inferior */
-    display: flex; /* Usar flexbox para disposición horizontal */
-    justify-content: space-between; /* Espacio entre los elementos */
-    align-items: flex-start; /* Alinear los elementos en la parte superior */
-}
+    /* ========== ESTILOS DE LA LÍNEA DE TIEMPO EN MODO ORDENADOR ========== */
 
-/* Cada item de la línea de tiempo */
-.timeline-item {
-    display: flex;
-    flex-direction: column; /* Mantener el contenido en columna */
-    align-items: center; /* Centrar los elementos */
-    position: relative;
-}
+    /* Contenedor principal de la línea de tiempo */
+    .timeline {
+        position: relative;
+        width: 100%;
+        max-width: 1200px;
+        /* Aumentar el ancho máximo para pantallas grandes */
+        margin: 50px auto;
+        padding: 20px 0;
+        /* Espaciado superior e inferior */
+        display: flex;
+        /* Usar flexbox para disposición horizontal */
+        justify-content: space-between;
+        /* Espacio entre los elementos */
+        align-items: flex-start;
+        /* Alinear los elementos en la parte superior */
+    }
 
-/* Checkbox oculto */
-.timeline-checkbox {
-    display: none; /* Ocultar el checkbox */
-}
+    /* Cada item de la línea de tiempo */
+    .timeline-item {
+        display: flex;
+        flex-direction: column;
+        /* Mantener el contenido en columna */
+        align-items: center;
+        /* Centrar los elementos */
+        position: relative;
+    }
 
-/* El punto de la línea de tiempo */
-.timeline-point {
-    width: 20px;
-    height: 20px;
-    background-color: #4CAF50;
-    border-radius: 50%;
-    position: relative; /* Cambiar a relativo para alineación */
-    z-index: 1; /* Asegurarse de que el punto esté encima */
-    transition: background-color 0.3s ease;
-}
+    /* Checkbox oculto */
+    .timeline-checkbox {
+        display: none;
+        /* Ocultar el checkbox */
+    }
 
-/* Efecto de hover en los puntos */
-.timeline-point:hover {
-    background-color: #3e8e41;
-}
+    /* El punto de la línea de tiempo */
+    .timeline-point {
+        width: 20px;
+        height: 20px;
+        background-color: #4CAF50;
+        border-radius: 50%;
+        position: relative;
+        /* Cambiar a relativo para alineación */
+        z-index: 1;
+        /* Asegurarse de que el punto esté encima */
+        transition: background-color 0.3s ease;
+    }
 
-/* Línea entre los puntos */
-.timeline-item:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    left: 50%; /* Centrar la línea */
-    top: 10px; /* Ajustar la posición de la línea */
-    width: calc(100% - 40px); /* Ancho de la línea, ajustado para que no sobresalga */
-    height: 2px; /* Altura de la línea */
-    background-color: #3e8e41; /* Color de la línea */
-    transform: translateX(-50%); /* Centrar la línea */
-}
+    /* Efecto de hover en los puntos */
+    .timeline-point:hover {
+        background-color: #3e8e41;
+    }
 
-/* Contenedor de la información de la experiencia */
-.timeline-content {
-    margin-top: 10px; /* Espacio superior para el contenido*/
-}
+    /* Línea entre los puntos */
+    .timeline-item:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        /* Centrar la línea */
+        top: 10px;
+        /* Ajustar la posición de la línea */
+        width: calc(100% - 40px);
+        /* Ancho de la línea, ajustado para que no sobresalga */
+        height: 2px;
+        /* Altura de la línea */
+        background-color: #3e8e41;
+        /* Color de la línea */
+        transform: translateX(-50%);
+        /* Centrar la línea */
+    }
+
+    /* Contenedor de la información de la experiencia */
+    .timeline-content {
+        margin-top: 10px;
+        /* Espacio superior para el contenido*/
+    }
 }
 
 /* ========== ESTILOS DE LA LÍNEA DE TIEMPO ========== */
@@ -285,14 +304,17 @@ a {
     margin: 50px auto;
     padding-left: 20px;
     display: flex;
-    flex-direction: column; /* Vertical por defecto */
-    align-items: flex-start; /* Alineación en la parte superior */
+    flex-direction: column;
+    /* Vertical por defecto */
+    align-items: flex-start;
+    /* Alineación en la parte superior */
 }
 
 /* Cada item de la línea de tiempo */
 .timeline-item {
     display: flex;
-    flex-direction: column; /* Cambiar a columna para que el contenido esté debajo del punto */
+    flex-direction: column;
+    /* Cambiar a columna para que el contenido esté debajo del punto */
     align-items: flex-start;
     margin: 20px 0;
     position: relative;
@@ -300,7 +322,8 @@ a {
 
 /* Checkbox oculto */
 .timeline-checkbox {
-    display: none; /* Ocultar el checkbox */
+    display: none;
+    /* Ocultar el checkbox */
 }
 
 /* El punto de la línea de tiempo */
@@ -310,9 +333,12 @@ a {
     background-color: #4CAF50;
     border-radius: 50%;
     position: absolute;
-    left: -11px; /* Ajustar la posición del punto */
-    top: 0; /* Alinear el punto en la parte superior */
-    z-index: 1; /* Asegurarse de que el punto esté encima del checkbox */
+    left: -11px;
+    /* Ajustar la posición del punto */
+    top: 0;
+    /* Alinear el punto en la parte superior */
+    z-index: 1;
+    /* Asegurarse de que el punto esté encima del checkbox */
     transition: background-color 0.3s ease;
 }
 
@@ -325,16 +351,22 @@ a {
 .timeline-item:not(:last-child)::after {
     content: '';
     position: absolute;
-    left: -7px; /* Ajustar la posición de la línea */
-    top: 20px; /* Ajustar la posición de la línea para que esté debajo del punto */
-    width: 2px; /* Ancho de la línea */
-    height: calc(100% - 20px); /* Altura de la línea, ajustada para que no sobresalga */
-    background-color: #ccc; /* Color de la línea */
+    left: -7px;
+    /* Ajustar la posición de la línea */
+    top: 20px;
+    /* Ajustar la posición de la línea para que esté debajo del punto */
+    width: 2px;
+    /* Ancho de la línea */
+    height: calc(100% - 20px);
+    /* Altura de la línea, ajustada para que no sobresalga */
+    background-color: #ccc;
+    /* Color de la línea */
 }
 
 /* Contenedor de la información de la experiencia */
 .timeline-content {
-    margin-left: 40px; /* Espacio a la izquierda del contenido */
+    margin-left: 40px;
+    /* Espacio a la izquierda del contenido */
     padding: 10px;
     background-color: aliceblue;
     border-radius: 8px;
@@ -345,7 +377,7 @@ a {
 }
 
 /* Mostrar la información al hacer clic */
-.timeline-checkbox:checked + .timeline-point + .timeline-content {
+.timeline-checkbox:checked+.timeline-point+.timeline-content {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
